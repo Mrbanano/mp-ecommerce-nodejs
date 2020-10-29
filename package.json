@@ -1,0 +1,27 @@
+{
+  "name": "mp-ecommerce-nodejs",
+  "version": "1.0.0",
+  "description": "Integración Mercado pago este sitio web es una tienda en línea desarrollada como parte de la certificación de integración de Mercado Pago, desarrollada en con HTML5, CSS, NodeJs y Express.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mrbanano/mp-ecommerce-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mrbanano/mp-ecommerce-nodejs/issues"
+  },
+  "homepage": "https://github.com/Mrbanano/mp-ecommerce-nodejs#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
