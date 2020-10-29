@@ -4,7 +4,8 @@
   "description": "Integración Mercado pago este sitio web es una tienda en línea desarrollada como parte de la certificación de integración de Mercado Pago, desarrollada en con HTML5, CSS, NodeJs y Express.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"npm install && node index.js"
   },
   "repository": {
     "type": "git",
