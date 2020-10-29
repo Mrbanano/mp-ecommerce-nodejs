@@ -1,5 +1,5 @@
 const express = require('express')
-var exphbs  = require('express-handlebars');
+var exphbs = require('express-handlebars');
 var port = process.env.PORT || 3000
 
 const app = express()
@@ -8,15 +8,16 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 app.use(express.static('assets'));
- 
+
 app.use('/assets', express.static(__dirname + '/assets'));
 
-
-
-app.get('/', (req, res )=> {
+app.get('/', (req, res) => {
     res.render('home');
 })
+app.get('/detail', function (req, res) {
+    res.render('detail', req.query);
+});
 
-app.listen(port,()=>{
+app.listen(port, () => {
     console.log(`server in port ${port}`)
 })
