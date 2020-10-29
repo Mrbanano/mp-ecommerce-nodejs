@@ -2,7 +2,7 @@
     font-family: 'Roboto', 'sans-serif';
 }
 body {
-    background-color: #fff6f6
+    background-color: #eeeeee
 }
 h1 {
     text-align: center;
@@ -107,14 +107,17 @@ ul {
 }
 
 .barra {
-    padding: 20px 0;
-background: #741d51; /* Old browsers */
-background: -moz-linear-gradient(left, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right, #741d51 0%,#e44e52 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */
+    padding: 20px 0px 0px 0px;
+background: #A5A7D4; /* Old browsers */
+background: -moz-linear-gradient(left, #A5A7D4 0%, #A4B7C6 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #A5A7D4 0%,#A4B7C6 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #A5A7D4 0%,#A4B7C6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A5A7D4', endColorstr='#A4B7C6',GradientType=1 ); /* IE6-9 */
 }
-
+ 
+.description-none{
+    text-align: center;
+}
 .barra p {
     margin:0;
     color: white;
