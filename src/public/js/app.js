@@ -85,6 +85,7 @@ function deleteCar(e) {
     counter(count);
   }
   deleteLocalStorge(courseId);
+  DivBntMercadoPago.innerHTML= ``;
 }
 //empty car
 function emptyCar() {
