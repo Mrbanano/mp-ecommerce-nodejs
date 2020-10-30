@@ -72,6 +72,29 @@ ul {
     min-height: 400px;
     min-width: 300px;
 }
+#btnMercadoPago{
+    color: white;
+}
+.btnMercadoPago{
+    border: 3px solid #1B1A65;
+    background-color: #008AD6;
+    color: white;
+    font-size: 1em;
+    height: 100%;
+    width: 100%;
+    color: #1B1A65;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btnMercadoPago:hover{
+    border: 3px solid white;
+}
+.imgMercadoPago{
+    width: 25%;
+}
+
 .vacio {
     padding: 10px;
     background-color: crimson;
@@ -161,7 +184,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A5A7D4', end
     margin-bottom: 5px;
 }
 .info-card .precio {
-    text-decoration: line-through;
     font-size: 18px;
     margin-top: 10px;
 }
