@@ -1,0 +1,243 @@
+*{
+    font-family: 'Roboto', 'sans-serif';
+}
+body {
+    background-color: #eeeeee
+}
+h1 {
+    text-align: center;
+}
+h4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+header {
+    padding: 20px 0 0 0;
+    background: white;
+    text-align: center;
+}
+.borrar-curso {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.count{
+    background-color: red;
+    height:20px;
+    width: 20px;
+    text-align: center;
+    border-radius: 100%;
+    color: white;
+    font-size:15px;
+    padding-bottom:2px 2px 2px 2px;
+    position: absolute;
+    left: 20px;
+}
+#img-carrito{
+    margin-top: 0.3em;
+    width: 33px;
+    padding-bottom: 10px;
+    height: 28px;
+}
+ul {
+    list-style: none;
+}
+#hero {
+    background-image:url(../img/hero.jpg);
+    height: 350px;
+}
+#encabezado {
+    margin: 30px 0;
+}
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+
+    top:100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+#btnMercadoPago{
+    color: white;
+}
+.btnMercadoPago{
+    border: 3px solid #1B1A65;
+    background-color: #008AD6;
+    color: white;
+    font-size: 1em;
+    height: 100%;
+    width: 100%;
+    color: #1B1A65;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btnMercadoPago:hover{
+    border: 3px solid white;
+}
+.imgMercadoPago{
+    width: 25%;
+}
+
+.vacio {
+    padding: 10px;
+    background-color: crimson;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+.contenido-hero {
+    margin-top: 80px;
+    color: white;
+}
+.contenido-hero form {
+    position: relative;
+    margin-bottom: 0;
+}
+.contenido-hero form #buscador {
+    height: 50px;
+    margin-bottom: 0;
+}
+.contenido-hero form .submit-buscador {
+    position: absolute;
+    right:0;
+    top:0;
+    height: 100%;
+    padding: 0;
+    display: block;
+    text-indent: -9999px;
+    width: 50px;
+    background-image: url(../img/lupa.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    border:none;
+}
+
+.barra {
+    padding: 20px 0px 0px 0px;
+background: #A5A7D4; /* Old browsers */
+background: -moz-linear-gradient(left, #A5A7D4 0%, #A4B7C6 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #A5A7D4 0%,#A4B7C6 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #A5A7D4 0%,#A4B7C6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A5A7D4', endColorstr='#A4B7C6',GradientType=1 ); /* IE6-9 */
+}
+ 
+.description-none{
+    text-align: center;
+}
+.barra p {
+    margin:0;
+    color: white;
+}
+.icono {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 60px;
+    background-size: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.icono1 {
+    background-image: url(../img/icono1.png);
+}
+.icono2 {
+    background-image: url(../img/icono2.png);
+}
+.icono3 {
+    background-image: url(../img/icono3.png);
+}
+
+#lista-cursos .row {
+    margin-bottom:20px;
+}
+.agregar-carrito {
+    margin:10px 0;
+}
+
+.card {
+    text-align: center;
+    border: 1px solid #e1e1e1;
+    background: white;
+}
+.info-card  {
+    padding: 10px 20px;
+}
+
+.info-card p, 
+.card h4 {
+    margin-bottom: 5px;
+}
+.info-card .precio {
+    font-size: 18px;
+    margin-top: 10px;
+}
+.info-card .precio span {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.footer {
+    margin-top: 40px;
+    border-top:1px solid #aaa;;
+    padding-top: 40px;   
+}
+.footer .menu a{
+display: block;
+margin-bottom: 10px;
+text-decoration: none;
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 600px) {
+    .cart{
+        display: inline-block;
+    }   
+    .count{
+        left: 50%;
+    }
+}
+
+@media only screen and (min-device-width: 601px) and (max-device-width: 800px) {
+    .cart{
+        display: inline-block;
+    }   
+    .count{
+        left: 50%;
+    }
+}
+
+@media only screen and (min-device-width: 801px) and (max-device-width: 1050px) {
+    .cart{
+        display: inline-block;
+    }   
+    .count{
+        left: 50%;
+    }
+
+}
+
+@media only screen and (min-device-width: 1051px) and (max-device-width: 4000px) {
+    .cart{
+        display: inline-block;
+    }   
+    .count{
+        left: 50%;
+    }
+
+}
+  
