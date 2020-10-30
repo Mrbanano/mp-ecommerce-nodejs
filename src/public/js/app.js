@@ -18,8 +18,8 @@ function EventListener() {
   emptyCarBtn.addEventListener("click", emptyCar);
   //load localstorage
   document.addEventListener("DOMContentLoaded", readLocalStorage);
-  //checkout 
-  DivBntMercadoPago.addEventListener('click',Checkout)
+  //checkout
+  DivBntMercadoPago.addEventListener("click", Checkout);
 }
 
 //funciones
@@ -31,9 +31,8 @@ function addCar(e) {
     //send data course
     readDataCouse(course);
     //count
-    count +=1;
+    count += 1;
     counter(count);
-    addBtnMercadoPago();
   }
 }
 //read data course
@@ -65,38 +64,38 @@ function insertCar(course) {
     `;
   listCourse.appendChild(row);
   saveCourseLocalStorage(course);
-  message =`Tu  ${course.title} fue agregado al carrito 🤗`
-  sendAlert(message,'success');
+  message = `Tu  ${course.title} fue agregado al carrito 🤗`;
+  sendAlert(message, "success");
 }
-function sendAlert (message,type){
+function sendAlert(message, type) {
   Swal.fire({
-    position: 'top-end',
+    position: "top-end",
     type: type,
     title: message,
     showConfirmButton: false,
-    timer: 1500
-  })
+    timer: 1500,
+  });
 }
-//insert BtnMercadoPago 
-function addBtnMercadoPago(){
-  DivBntMercadoPago.innerHTML= `
+//insert BtnMercadoPago
+function addBtnMercadoPago() {
+  DivBntMercadoPago.innerHTML = `
   <a href="" id="btnMercadoPago" class="button u-full-width btnMercadoPago">
   Pagar la compra
   </a>`;
 }
-//delte btnMercadoPago 
-function deleteBtnMercadoPago (){
-  DivBntMercadoPago.innerHTML= ``;
+//delte btnMercadoPago
+function deleteBtnMercadoPago() {
+  DivBntMercadoPago.innerHTML = ` <div></div> `;
 }
 //handlerBtnMercadoPago
-function Checkout(e){
-  e.preventDefault()
-  alert('vamos bien')
+function Checkout(e) {
+  e.preventDefault();
+  alert("vamos bien");
 }
 //delete car
 function deleteCar(e) {
   e.preventDefault();
-  count -=1;
+  count -= 1;
   let course, courseId;
   if (e.target.classList.contains("borrar-curso")) {
     course = e.target.parentElement.parentElement;
@@ -104,10 +103,9 @@ function deleteCar(e) {
     console.log(courseId);
     course.remove();
     counter(count);
-    sendAlert('Se elimino tu producto 🙄','error')
+    sendAlert("Se elimino tu producto 🙄", "error");
   }
   deleteLocalStorge(courseId);
-  deleteBtnMercadoPago();
 }
 //empty car
 function emptyCar() {
@@ -131,7 +129,6 @@ function getCourseLoalStorage() {
     couseLS = [];
   } else {
     couseLS = JSON.parse(localStorage.getItem("courses"));
-    addBtnMercadoPago();
   }
   return couseLS;
 }
@@ -140,7 +137,7 @@ function readLocalStorage() {
   let coursesLs;
   coursesLs = getCourseLoalStorage();
   items = coursesLs.length;
-  itemStr=items.toString();
+  itemStr = items.toString();
   coursesLs.forEach(function (course) {
     const row = document.createElement("tr");
     row.innerHTML = `
@@ -161,8 +158,7 @@ function readLocalStorage() {
   });
   //marcador
   count = items;
-  counter(items); 
-  addBtnMercadoPago();
+  counter(items);
 }
 //delete id localStorage
 function deleteLocalStorge(id) {
@@ -174,23 +170,23 @@ function deleteLocalStorge(id) {
     }
   });
   localStorage.setItem("courses", JSON.stringify(courseLs));
-  
 }
 //empty localStorage
 function emptyLocalStorage() {
   localStorage.clear();
-  
 }
 
-//count 
-function counter(value){
-  let counter = document.querySelector('#count');
-  if(value <= 0 ){
-    counter.setAttribute('hidden',"");
-  }else{
+//count
+function counter(value) {
+  let counter = document.querySelector("#count");
+  if (value <= 0) {
+    counter.setAttribute("hidden", "");
+    deleteBtnMercadoPago();
+  } else {
     value.toString();
-    counter.removeAttribute('hidden',"");
-    counter.classList = 'count';
-    counter = counter.innerText= value;
+    counter.removeAttribute("hidden", "");
+    counter.classList = "count";
+    counter = counter.innerText = value;
+    addBtnMercadoPago();
   }
 }
